@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Doctor's Office</title>
+    <link rel="stylesheet" href="input.css" />
+    <link rel="stylesheet" href="output.css" />
+    <style>
+      /* Custom Styles */
+      html {
+        scroll-behavior: smooth;
+      }
+
+      /* Full-screen height for the hero section */
+      .hero {
+        height: 100vh;
+      }
+    </style>
+  </head>
+
+  <body class="bg-gray-100 text-gray-800">
+    <!-- Navigation Bar -->
+    <nav class="bg-blue-600 p-4 fixed w-full top-0 z-10 shadow-lg">
+      <div class="container mx-auto flex justify-between items-center">
+        <a href="#home" class="text-white text-2xl font-bold"
+          >Dr. Smith's Clinic</a
+        >
+        <ul class="flex space-x-6">
+          <li>
+            <a href="#home" class="text-white hover:text-gray-200">Home</a>
+          </li>
+          <li>
+            <a href="#services" class="text-white hover:text-gray-200"
+              >Services</a
+            >
+          </li>
+          <li>
+            <a href="#about" class="text-white hover:text-gray-200">About</a>
+          </li>
+          <li>
+            <a href="#gallery" class="text-white hover:text-gray-200"
+              >Gallery</a
+            >
+          </li>
+          <li>
+            <a href="#contact" class="text-white hover:text-gray-200"
+              >Contact</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+      id="home"
+      class="hero bg-cover bg-center flex items-center justify-center text-center bg-blue-500 text-white"
+      style="
+        background-image: url('https://source.unsplash.com/1600x900/?doctor,healthcare');
+      "
+    >
+      <div class="container mx-auto">
+        <h1 class="text-5xl font-bold mb-4">Welcome to Dr. Smith's Clinic</h1>
+        <p class="text-xl mb-8">
+          Providing compassionate and quality healthcare services to keep you
+          healthy.
+        </p>
+        <button
+          class="bg-white text-blue-500 font-bold py-2 px-4 rounded shadow-lg hover:bg-gray-200"
+        >
+          Book an Appointment
+        </button>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20">
+      <div class="container mx-auto text-center">
+        <h2 class="text-4xl font-bold mb-12">Our Services</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Service 1 -->
+          <div class="bg-white p-6 rounded-lg shadow-lg">
+            <h3 class="text-2xl font-bold mb-4">General Consultation</h3>
+            <p>
+              Comprehensive health check-ups and personalized medical advice for
+              all your healthcare needs.
+            </p>
+          </div>
+          <!-- Service 2 -->
+          <div class="bg-white p-6 rounded-lg shadow-lg">
+            <h3 class="text-2xl font-bold mb-4">Pediatrics</h3>
+            <p>
+              Expert pediatric care for infants, children, and adolescents to
+              ensure their healthy development.
+            </p>
+          </div>
+          <!-- Service 3 -->
+          <div class="bg-white p-6 rounded-lg shadow-lg">
+            <h3 class="text-2xl font-bold mb-4">Cardiology</h3>
+            <p>
+              Advanced heart care, diagnostics, and treatment plans for
+              cardiovascular health.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="bg-gray-200 py-20">
+      <div class="container mx-auto text-center">
+        <h2 class="text-4xl font-bold mb-8">About Dr. Smith</h2>
+        <p class="text-xl mb-6">
+          Dr. Smith is a board-certified physician with over 20 years of
+          experience in the medical field. He is dedicated to providing
+          personalized care using the latest medical advancements and a
+          compassionate approach.
+        </p>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-20">
+      <div class="container mx-auto text-center">
+        <h2 class="text-4xl font-bold mb-8">Gallery</h2>
+        <div class="relative w-full max-w-4xl mx-auto">
+          <div class="overflow-hidden rounded-lg shadow-lg">
+            <!-- Slider Container -->
+            <div id="slider" class="flex">
+              <!-- Slide 1 -->
+              <div class="min-w-full">
+                <img
+                  src="../assets/matab img.jpg"
+                  alt="Clinic 1"
+                  class="w-full"
+                />
+              </div>
+              <!-- Slide 2 -->
+              <div class="min-w-full">
+                <img
+                  src="https://source.unsplash.com/1600x900/?doctor,patient"
+                  alt="Clinic 2"
+                  class="w-full"
+                />
+              </div>
+              <!-- Slide 3 -->
+              <div class="min-w-full">
+                <img
+                  src="https://source.unsplash.com/1600x900/?hospital,healthcare"
+                  alt="Clinic 3"
+                  class="w-full"
+                />
+              </div>
+            </div>
+          </div>
+          <!-- Navigation Buttons -->
+          <button
+            id="prev"
+            class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-blue-500 text-white px-4 py-2 rounded-full shadow-lg hover:bg-blue-700"
+          >
+            Prev
+          </button>
+          <button
+            id="next"
+            class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-blue-500 text-white px-4 py-2 rounded-full shadow-lg hover:bg-blue-700"
+          >
+            Next
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20">
+      <div class="container mx-auto text-center">
+        <h2 class="text-4xl font-bold mb-8">Contact Us</h2>
+        <div class="max-w-xl mx-auto bg-white p-8 rounded-lg shadow-lg">
+          <form id="contactForm">
+            <div class="mb-4">
+              <label
+                class="block text-gray-700 text-sm font-bold mb-2"
+                for="name"
+                >Name</label
+              >
+              <input
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                type="text"
+                id="name"
+                placeholder="Your Name"
+                required
+              />
+            </div>
+            <div class="mb-4">
+              <label
+                class="block text-gray-700 text-sm font-bold mb-2"
+                for="email"
+                >Email</label
+              >
+              <input
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                type="email"
+                id="email"
+                placeholder="Your Email"
+                required
+              />
+            </div>
+            <div class="mb-4">
+              <label
+                class="block text-gray-700 text-sm font-bold mb-2"
+                for="message"
+                >Message</label
+              >
+              <textarea
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                id="message"
+                rows="5"
+                placeholder="Your Message"
+                required
+              ></textarea>
+            </div>
+            <button
+              class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+              type="submit"
+            >
+              Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-blue-600 text-white py-4">
+      <div class="container mx-auto text-center">
+        <p>&copy; 2024 Dr. Smith's Clinic. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- JavaScript for Form and Slider -->
+    <script>
+      // Form Submission Handling
+      document
+        .getElementById("contactForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          alert("Thank you for contacting us! We will get back to you soon.");
+          this.reset(); // Reset form fields after submission
+        });
+
+      // Slider Functionality
+      const slider = document.getElementById("slider");
+      const slides = slider.children.length;
+      let currentIndex = 0;
+
+      document.getElementById("next").addEventListener("click", () => {
+        currentIndex = (currentIndex + 1) % slides;
+        updateSlider();
+      });
+
+      document.getElementById("prev").addEventListener("click", () => {
+        currentIndex = (currentIndex - 1 + slides) % slides;
+        updateSlider();
+      });
+
+      function updateSlider() {
+        slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+      }
+    </script>
+  </body>
+</html>
