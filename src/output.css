@@ -799,14 +799,6 @@ video {
   background-size: cover;
 }
 
-.bg-clip-content {
-  background-clip: content-box;
-}
-
-.bg-center {
-  background-position: center;
-}
-
 .bg-bottom {
   background-position: bottom;
 }
