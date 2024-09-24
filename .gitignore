@@ -1,5 +1,4 @@
-/
-!index.html
-!input.css
-!output.css
-assets/
+node_modules/
+package-lock.json
+package.json
+tailwind.config.js
