@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+  @font-face {
+    font-family: "byekan";
+    font-weight: 400;
+    src: url("../assets/fonts/B_Yekan/Yekan.ttf") format("truetype");
+  }
+}
+@layer base {
+  @font-face {
+    font-family: "lalezar";
+    font-weight: 400;
+    src: url("../assets/fonts/Lalezar-Font/TTF/Lalezar-Regular.ttf")
+      format("truetype");
+  }
+}
