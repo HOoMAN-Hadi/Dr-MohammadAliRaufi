@@ -3,24 +3,44 @@ let servicesLi = $.querySelector("#servicesLi");
 let servicesBar = $.querySelector("#servicesBar");
 let servicesBarToggle = false;
 let servicesIcon = $.querySelector("#servicesIcon");
+let servicesBarIcon = $.querySelector("#servicesBarIcon");
+let beutyServ = $.querySelector("#beutyServ");
+let beutyServBar = $.querySelector("#beutyServBar");
+
+let beutyServicesToggle = false;
 servicesLi.addEventListener("click", function () {
   if (!servicesBarToggle) {
     servicesBar.classList =
-      "text-white bg-blue-800 bg-opacity-50 absolute w-28 -right-[20px] rounded-2xl flex flex-col items-center leading-8 p-3 m-2 hover:bg-white hover:text-blue-800";
+      "text-white absolute w-36 bg-blue-800 bg-opacity-80 -right-[30px] rounded-2xl flex flex-col items-center leading-8 p-3 m-2 hover:bg-white hover:text-blue-800";
     servicesIcon.classList = "size-4 inline rotate-180";
     servicesBarToggle = true;
   } else {
     servicesBar.classList =
-      "text-white bg-blue-600 absolute w-28 -right-[20px] rounded-2xl hidden flex-col items-center leading-8 p-3 m-2 hover:bg-white hover:text-blue-800";
+      "text-white absolute w-36 bg-blue-800 bg-opacity-50 -right-[20px] rounded-2xl hidden flex-col items-center leading-8 p-3 m-2 hover:bg-white hover:text-blue-800";
     servicesIcon.classList = "size-4 inline";
     servicesBarToggle = false;
   }
 });
+
+beutyServ.addEventListener("click", function () {
+  if (!beutyServicesToggle) {
+    beutyServBar.classList =
+      "flex rounded-2xl absolute right-[120px] top-1 w-36 bg-blue-800 hover:bg-white bg-opacity-80 flex-col items-center leading-8 p-3";
+
+    servicesBarIcon.classList = "size-4 inline rotate-90";
+    beutyServicesToggle = true;
+  } else {
+    beutyServBar.classList =
+      "hidden rounded-2xl absolute right-[120px] top-1 w-36 bg-blue-800 hover:bg-white bg-opacity-50 flex-col items-center leading-8 p-3";
+    servicesBarIcon.classList = "size-4 inline";
+    beutyServicesToggle = false;
+  }
+});
+
 // Array of image URLs
 const images = [
-  "assets/images/photo_2024-09-25_01-22-12.jpg",
-  "assets/images/home2.jpg",
-  "assets/images/photo_2024-09-25_16-43-58.jpg",
+  "../assets/images/photo_2024-09-25_01-22-12.jpg",
+  "../assets/images/photo_2024-09-25_16-43-58.jpg",
 ];
 
 let currentIndex = 0;

@@ -23,14 +23,14 @@
     <!-- Navigation Bar -->
     <nav
       id="nav"
-      class="bg-blue-800 bg-opacity-50 fixed w-full top-0 z-10 flex justify-around items-center py-5"
+      class="bg-blue-800 bg-opacity-50 fixed w-full top-0 z-10 flex justify-around items-center py-3"
     >
-      <div id="name" class="w-1/3 flex gap-3">
+      <div id="name" class="w-1/3 flex gap-3 items-center">
         <a href="#home" class="text-white text-2xl font-bold font-byekan"
           >مطب دکتر محمد علی ریوفی</a
         >
         <div id="numbers" class="tracking-widest">
-          <p class="flex">
+          <p class="flex text-left">
             051-36912930
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -47,7 +47,7 @@
               />
             </svg>
           </p>
-          <p class="flex">
+          <p class="flex mr-3 mt-2">
             9309537869
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -67,9 +67,10 @@
         </div>
       </div>
       <ul class="flex w-1/2 justify-around">
-        <li id="servicesLi" class="relative">
+        <li class="relative">
           <a
             href="#_"
+            id="servicesLi"
             class="relative inline-flex items-center justify-start px-6 py-3 overflow-hidden font-medium transition-all bg-blue-800 bg-opacity-80 rounded hover:bg-white group"
           >
             <span
@@ -94,12 +95,51 @@
               </svg>
             </span>
           </a>
-          <div
-            id="servicesBar"
-            class="text-white absolute w-28 -right-[20px] rounded-2xl hidden flex-col items-center leading-8 p-3 m-2 hover:bg-white hover:text-blue-800"
-          >
-            <a class="hover:font-bold" href="#">خدمات درمانی</a
-            ><a class="hover:font-bold" href="#">خدمات زیبایی</a>
+          <div id="servicesBar" class="hidden">
+            <div id="medicalServ">
+              <a class="hover:font-bold" href="#"
+                >خدمات درمانی<svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                  class="size-4 inline"
+                  id="servicesBarIcon2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="m19.5 8.25-7.5 7.5-7.5-7.5"
+                  />
+                </svg>
+              </a>
+            </div>
+            <div id="beutyServ" class="relative">
+              <a class="hover:font-bold" href="#"
+                >خدمات زیبایی
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                  class="size-4 inline"
+                  id="servicesBarIcon"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="m19.5 8.25-7.5 7.5-7.5-7.5"
+                  />
+                </svg>
+              </a>
+              <div id="beutyServBar" class="hidden">
+                <a href="#">بوتاکس</a>
+                <a href="#"> تزریق ژل لب</a>
+                <a href="#" class="text-sm">درمان بیماریهای پوستی</a>
+              </div>
+            </div>
           </div>
         </li>
         <li>
@@ -149,18 +189,21 @@
     <!-- Hero Section -->
     <section
       id="home"
-      class="hero bg-[length:1400px_100vh] bg-no-repeat bg-center bg-blend-multiply flex items-center text-center bg-blue-400 text-white"
+      class="hero bg-[length:1400px_100vh] bg-no-repeat bg-left bg-blend-multiply flex items-center text-center bg-blue-100 text-white"
       style="
         background-image: url('../assets/images/photo_2024-09-25_16-43-58.jpg');
       "
     >
-      <div class="w-1/2 bg-blue-800 bg-opacity-35 rounded-2xl">
+      <div class="w-1/2 bg-blue-800 bg-opacity-50 rounded-2xl">
         <h1 class="text-4xl font-bold mb-6 font-byekan">
           خدمات پزشکی و پوست با کیفیت بالا و هزینه مناسب
         </h1>
         <p class="text-lg">
-          داخلی &nbsp; کودکان &nbsp; پوست &nbsp; زنان &nbsp; عفونی
+          <span class="font-bold">ویزیت پزشک</span> _&nbsp; تزریقات _&nbsp; سرم
+          تراپی _&nbsp; پانسمان _&nbsp; حجامت _&nbsp; سوراخ کردن گوش _&nbsp;فصد
+          خون _&nbsp;<span class="font-bold">پرستاری در منزل</span>
         </p>
+        <h2 class="text-2xl">بوتاکس و سایر خدمات پوستی</h2>
       </div>
     </section>
 
