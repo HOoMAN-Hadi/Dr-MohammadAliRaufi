@@ -18,9 +18,9 @@ servicesLi.addEventListener("click", function () {
 });
 // Array of image URLs
 const images = [
-  "../assets/images/photo_2024-09-25_01-22-12.jpg",
-  "../assets/images/home2.jpg",
-  "../assets/images/photo_2024-09-25_16-43-58.jpg",
+  "assets/images/photo_2024-09-25_01-22-12.jpg",
+  "assets/images/home2.jpg",
+  "assets/images/photo_2024-09-25_16-43-58.jpg",
 ];
 
 let currentIndex = 0;
