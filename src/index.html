@@ -16,6 +16,14 @@
       .hero {
         height: 100vh;
       }
+      /* Custom animation for the card */
+      .card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      .card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+      }
     </style>
   </head>
 
@@ -97,7 +105,7 @@
           </a>
           <div id="servicesBar" class="hidden">
             <div id="medicalServ">
-              <a class="hover:font-bold" href="#"
+              <a class="hover:font-bold" href="#medicalServSec"
                 >خدمات درمانی<svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -114,9 +122,10 @@
                   />
                 </svg>
               </a>
+              <div id="medicalServBar"></div>
             </div>
-            <div id="beutyServ" class="relative">
-              <a class="hover:font-bold" href="#"
+            <div id="beutyServ">
+              <a class="hover:font-bold" href="#beutyServSec"
                 >خدمات زیبایی
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -134,15 +143,17 @@
                   />
                 </svg>
               </a>
-              <div id="beutyServBar" class="hidden">
-                <a href="#">بوتاکس</a>
-                <a href="#"> تزریق ژل لب</a>
-                <a href="#" class="text-sm">درمان بیماریهای پوستی</a>
-              </div>
+            </div>
+            <div id="beutyServBar" class="hidden">
+              <a href="#" class="hover:font-bold">بوتاکس</a>
+              <a href="#" class="hover:font-bold"> تزریق ژل لب</a>
+              <a href="#" class="text-sm hover:font-bold"
+                >درمان بیماریهای پوستی</a
+              >
             </div>
           </div>
         </li>
-        <li>
+        <li id="aboutLi" class="relative">
           <a
             href="#_"
             class="relative inline-flex items-center justify-start px-6 py-3 overflow-hidden font-medium transition-all bg-blue-800 bg-opacity-80 rounded hover:bg-white group"
@@ -152,9 +163,31 @@
             ></span>
             <span
               class="relative w-full text-left text-white transition-colors duration-300 ease-in-out group-hover:text-blue-800"
-              >درباره</span
-            >
+              >درباره<svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                class="size-4 inline"
+                id="aboutIcon"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="m19.5 8.25-7.5 7.5-7.5-7.5"
+                />
+              </svg>
+            </span>
           </a>
+          <div id="aboutBar" class="hidden">
+            <div id="aboutDoctor">
+              <a class="hover:font-bold" href="#">معرفی پزشکی </a>
+            </div>
+            <div id="aboutOffice">
+              <a class="hover:font-bold" href="#">معرفی مطب </a>
+            </div>
+          </div>
         </li>
         <li>
           <a
@@ -189,7 +222,7 @@
     <!-- Hero Section -->
     <section
       id="home"
-      class="hero bg-[length:1400px_100vh] bg-no-repeat bg-left bg-blend-multiply flex items-center text-center bg-blue-100 text-white"
+      class="hero bg-[length:1400px_100vh] bg-no-repeat bg-left flex items-center text-center text-white"
       style="
         background-image: url('../assets/images/photo_2024-09-25_16-43-58.jpg');
       "
@@ -209,7 +242,7 @@
 
     <!-- Services Section -->
     <section id="services" class="py-20">
-      <div class="container mx-auto text-center">
+      <div id="medicalServSec" class="container mx-auto text-center">
         <h2 class="text-4xl font-bold mb-12">Our Services</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           <!-- Service 1 -->
@@ -235,6 +268,82 @@
               Advanced heart care, diagnostics, and treatment plans for
               cardiovascular health.
             </p>
+          </div>
+        </div>
+      </div>
+      <!-- بخش خدمات زیبایی -->
+      <div id="beutyServSec" class="container mx-auto text-center">
+        <h2 class="text-4xl font-bold mb-12">خدمات زیبایی</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Service 1 -->
+          <div
+            class="max-w-md rounded-lg overflow-hidden shadow-lg bg-white card"
+          >
+            <div class="relative">
+              <img
+                class="w-full h-48 object-cover"
+                src="../assets/images/photo_2024-09-25_16-45-02.jpg"
+                alt="Medical Theme"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-blue-900 to-transparent"
+              ></div>
+              <div
+                class="absolute inset-0 flex items-center justify-center"
+              ></div>
+            </div>
+            <div class="px-6 py-4">
+              <h1 class="font-bold text-xl text-gray-800 mb-2">تزریق بوتاکس</h1>
+              <h3 class="text-gray-600 text-base mb-4">رفع چروک</h3>
+              <span class="text-gray-500 text-xs">آخرین آپدیت 2024</span>
+            </div>
+          </div>
+
+          <!-- Service 2 -->
+          <div
+            class="max-w-md rounded-lg overflow-hidden shadow-lg bg-white card"
+          >
+            <div class="relative">
+              <img
+                class="w-full h-48 object-cover"
+                src="../assets/images/photo_2024-09-25_16-45-21.jpg"
+                alt="Medical Theme"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-blue-900 to-transparent"
+              ></div>
+              <div
+                class="absolute inset-0 flex items-center justify-center"
+              ></div>
+            </div>
+            <div class="px-6 py-4">
+              <h1 class="font-bold text-xl text-gray-800 mb-2">تزریق ژل لب</h1>
+              <h3 class="text-gray-600 text-base mb-4">برند روفیل پلاس</h3>
+              <span class="text-gray-500 text-xs">آخرین آپدیت 2024</span>
+            </div>
+          </div>
+          <!-- Service 3 -->
+          <div
+            class="max-w-md rounded-lg overflow-hidden shadow-lg bg-white card"
+          >
+            <div class="relative">
+              <img
+                class="w-full h-48 object-cover"
+                src="../assets/images/photo_2024-09-25_16-44-13.jpg"
+                alt="Medical Theme"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-blue-900 to-transparent"
+              ></div>
+              <div
+                class="absolute inset-0 flex items-center justify-center"
+              ></div>
+            </div>
+            <div class="px-6 py-4">
+              <h1 class="font-bold text-xl text-gray-800 mb-2">تزریق بوتاکس</h1>
+              <h3 class="text-gray-600 text-base mb-4">رفع چروک</h3>
+              <span class="text-gray-500 text-xs">آخرین آپدیت 2024</span>
+            </div>
           </div>
         </div>
       </div>
@@ -271,19 +380,11 @@
               </div>
               <!-- Slide 2 -->
               <div class="min-w-full">
-                <img
-                  src="https://source.unsplash.com/1600x900/?doctor,patient"
-                  alt="Clinic 2"
-                  class="w-full"
-                />
+                <img src="" alt="Clinic 2" class="w-full" />
               </div>
               <!-- Slide 3 -->
               <div class="min-w-full">
-                <img
-                  src="https://source.unsplash.com/1600x900/?hospital,healthcare"
-                  alt="Clinic 3"
-                  class="w-full"
-                />
+                <img src="" alt="Clinic 3" class="w-full" />
               </div>
             </div>
           </div>
