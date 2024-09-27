@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>دکتر محمد علی ریوفی</title>
+    <title>دکتر محمد علی رئوفی</title>
     <link rel="stylesheet" href="input.css" />
     <link rel="stylesheet" href="output.css" />
     <style>
@@ -23,6 +23,18 @@
       .card:hover {
         transform: translateY(-10px);
         box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+      }
+      .btn {
+        padding: 8px 16px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        cursor: pointer;
+        margin: 5px;
+        border-radius: 5px;
+      }
+      .btn:hover {
+        background-color: #0056b3;
       }
     </style>
   </head>
@@ -272,77 +284,131 @@
         </div>
       </div>
       <!-- بخش خدمات زیبایی -->
+
       <div id="beutyServSec" class="container mx-auto text-center">
-        <h2 class="text-4xl font-bold mb-12">خدمات زیبایی</h2>
+        <div id="beutyServTitle" class="flex justify-center items-center m-3">
+          <h2 class="text-4xl font-bold ml-2">خدمات زیبایی</h2>
+          <img src="../assets/images/botoxLogo.png" alt="Botox Logo" />
+        </div>
+
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           <!-- Service 1 -->
           <div
+            id="botoxCardContainer"
             class="max-w-md rounded-lg overflow-hidden shadow-lg bg-white card"
           >
-            <div class="relative">
+            <div id="cardImg" class="relative">
               <img
-                class="w-full h-48 object-cover"
-                src="../assets/images/photo_2024-09-25_16-45-02.jpg"
+                id="botoxCardContainerImg"
+                class="w-full h-48"
+                src="../assets/images/botaxImg1.jpg"
                 alt="Medical Theme"
               />
-              <div
-                class="absolute inset-0 bg-gradient-to-t from-blue-900 to-transparent"
-              ></div>
-              <div
-                class="absolute inset-0 flex items-center justify-center"
-              ></div>
             </div>
             <div class="px-6 py-4">
-              <h1 class="font-bold text-xl text-gray-800 mb-2">تزریق بوتاکس</h1>
-              <h3 class="text-gray-600 text-base mb-4">رفع چروک</h3>
+              <h1 id="botoxCardH1" class="font-bold text-xl text-gray-800 mb-2">
+                تزریق بوتاکس
+              </h1>
+              <h3 id="botoxCardH3" class="text-gray-600 text-base mb-4">
+                رفع خط لبخند
+              </h3>
               <span class="text-gray-500 text-xs">آخرین آپدیت 2024</span>
+            </div>
+            <!-- Control Buttons for Card 1 -->
+            <div class="mt-4">
+              <button
+                id="prevBtn1"
+                class="bg-blue-500 text-white font-bold py-2 px-4 rounded mr-4"
+              >
+                Previous
+              </button>
+              <button
+                id="nextBtn1"
+                class="bg-blue-500 text-white font-bold py-2 px-4 rounded"
+              >
+                Next
+              </button>
             </div>
           </div>
 
           <!-- Service 2 -->
           <div
+            id="lipsCardContainer"
             class="max-w-md rounded-lg overflow-hidden shadow-lg bg-white card"
           >
-            <div class="relative">
+            <div id="cardImg" class="relative">
               <img
-                class="w-full h-48 object-cover"
-                src="../assets/images/photo_2024-09-25_16-45-21.jpg"
+                id="lipsCardContainerImg"
+                class="w-full h-48"
+                src="../assets/images/lipsZhelImg3.jpg"
                 alt="Medical Theme"
               />
-              <div
-                class="absolute inset-0 bg-gradient-to-t from-blue-900 to-transparent"
-              ></div>
-              <div
-                class="absolute inset-0 flex items-center justify-center"
-              ></div>
             </div>
             <div class="px-6 py-4">
-              <h1 class="font-bold text-xl text-gray-800 mb-2">تزریق ژل لب</h1>
-              <h3 class="text-gray-600 text-base mb-4">برند روفیل پلاس</h3>
+              <h1 id="lipsCardH1" class="font-bold text-xl text-gray-800 mb-2">
+                تزریق ژل لب
+              </h1>
+              <h3 id="lipsCardH3" class="text-gray-600 text-base mb-4">
+                برند روفیل پلاس
+              </h3>
               <span class="text-gray-500 text-xs">آخرین آپدیت 2024</span>
+            </div>
+            <!-- Control Buttons for Card 2 -->
+            <div class="mt-4">
+              <button
+                id="prevBtn2"
+                class="bg-blue-500 text-white font-bold py-2 px-4 rounded mr-4"
+              >
+                Previous
+              </button>
+              <button
+                id="nextBtn2"
+                class="bg-blue-500 text-white font-bold py-2 px-4 rounded"
+              >
+                Next
+              </button>
             </div>
           </div>
+
           <!-- Service 3 -->
           <div
+            id="botoxCardContainerSecond"
             class="max-w-md rounded-lg overflow-hidden shadow-lg bg-white card"
           >
-            <div class="relative">
+            <div id="cardImg" class="relative">
               <img
-                class="w-full h-48 object-cover"
-                src="../assets/images/photo_2024-09-25_16-44-13.jpg"
+                id="botoxCardContainerImgSecond"
+                class="w-full h-48"
+                src="../assets/images/botoxImg10.jpg"
                 alt="Medical Theme"
               />
-              <div
-                class="absolute inset-0 bg-gradient-to-t from-blue-900 to-transparent"
-              ></div>
-              <div
-                class="absolute inset-0 flex items-center justify-center"
-              ></div>
             </div>
             <div class="px-6 py-4">
-              <h1 class="font-bold text-xl text-gray-800 mb-2">تزریق بوتاکس</h1>
-              <h3 class="text-gray-600 text-base mb-4">رفع چروک</h3>
+              <h1
+                id="botoxCardH1Second"
+                class="font-bold text-xl text-gray-800 mb-2"
+              >
+                تزریق بوتاکس
+              </h1>
+              <h3 id="botoxCardH3Second" class="text-gray-600 text-base mb-4">
+                بهبود نسبی خط عمیق اخم
+              </h3>
               <span class="text-gray-500 text-xs">آخرین آپدیت 2024</span>
+            </div>
+            <!-- Control Buttons for Card 3 -->
+            <div class="mt-4">
+              <button
+                id="prevBtn3"
+                class="bg-blue-500 text-white font-bold py-2 px-4 rounded mr-4"
+              >
+                Previous
+              </button>
+              <button
+                id="nextBtn3"
+                class="bg-blue-500 text-white font-bold py-2 px-4 rounded"
+              >
+                Next
+              </button>
             </div>
           </div>
         </div>
