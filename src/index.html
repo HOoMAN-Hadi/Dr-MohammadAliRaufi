@@ -46,7 +46,7 @@
     >
       <div id="name" class="w-1/3 flex gap-3 items-center">
         <a href="#home" class="text-white text-2xl font-bold font-byekan"
-          >مطب دکتر محمد علی ریوفی</a
+          >مطب دکتر محمد علی رئوفی</a
         >
         <div id="numbers" class="tracking-widest">
           <p class="flex text-left">
@@ -66,8 +66,8 @@
               />
             </svg>
           </p>
-          <p class="flex mr-3 mt-2">
-            9309537869
+          <p class="flex mr-1 mt-2">
+            09309537869
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -231,23 +231,84 @@
       </ul>
     </nav>
     <!-- Hero Section -->
+
     <section
-      id="home"
-      class="hero bg-[length:1400px_100vh] bg-no-repeat bg-left flex items-center text-center text-white"
-      style="
-        background-image: url('../assets/images/photo_2024-09-25_16-43-58.jpg');
-      "
+      class="relative bg-gray-800 h-screen flex items-center justify-center"
     >
-      <div class="w-1/2 bg-blue-800 bg-opacity-50 rounded-2xl p-2">
-        <h1 class="text-4xl font-bold mb-6 font-byekan">
-          خدمات پزشکی و پوست با کیفیت بالا و هزینه مناسب
-        </h1>
-        <p class="text-lg">
-          <span class="font-bold">ویزیت پزشک</span> _&nbsp; تزریقات _&nbsp; سرم
-          تراپی _&nbsp; پانسمان _&nbsp; حجامت _&nbsp; سوراخ کردن گوش _&nbsp;فصد
-          خون _&nbsp;<span class="font-bold">پرستاری در منزل</span>
-        </p>
-        <h2 class="text-2xl">بوتاکس و سایر خدمات پوستی</h2>
+      <img
+        src="../assets/images/bg3.jpg"
+        alt="Background"
+        class="absolute inset-0 object-cover w-full h-full opacity-50"
+      />
+
+      <div
+        class="container mx-auto flex justify-between items-center relative z-10 w-full px-6"
+      >
+        <!-- بخش header -->
+        <div id="header" class="flex flex-col w-1/3 items-center text-center">
+          <h1 class="text-5xl text-white font-bold mb-4">
+            خدمات پزشکی و زیبایی
+          </h1>
+          <p class="text-lg text-gray-200 mb-6">
+            خدماتی با کیفیت بالا و هزینه مناسب
+          </p>
+          <div class="flex w-1/2 justify-between text-gray-900">
+            <a
+              href="#_"
+              class="relative inline-flex items-center justify-start px-6 py-3 overflow-hidden font-medium transition-all bg-white bg-opacity-80 rounded hover:bg-blue-800 group"
+            >
+              <span
+                class="w-48 h-48 rounded rotate-[-40deg] bg-blue-800 absolute bottom-0 left-0 -translate-x-full ease-in-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0"
+              ></span>
+              <span
+                class="relative w-full text-left text-blue-800 transition-colors duration-300 ease-in-out group-hover:text-white"
+                >خدمات</span
+              >
+            </a>
+            <a
+              href="#_"
+              class="relative inline-flex items-center justify-start px-6 py-3 overflow-hidden font-medium transition-all bg-white bg-opacity-80 rounded hover:bg-blue-800 group"
+            >
+              <span
+                class="w-48 h-48 rounded rotate-[-40deg] bg-blue-800 absolute bottom-0 left-0 -translate-x-full ease-in-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0"
+              ></span>
+              <span
+                class="relative w-full text-left text-blue-800 transition-colors duration-300 ease-in-out group-hover:text-white"
+                >درباره</span
+              >
+            </a>
+          </div>
+        </div>
+
+        <!-- بخش خدمات پوست و پزشکی -->
+        <div class="w-1/3">
+          <div class="grid grid-cols-1 divide-y-8 divide-gray-400">
+            <div class="p-3">
+              <h2 class="text-xl font-bold text-gray-200 font-byekan mb-4">
+                خدمات پزشکی و پرستاری با کیفیت بالا و هزینه مناسب
+              </h2>
+              <p class="text-gray-300">
+                ویزیت پزشک&nbsp;&nbsp; تزریقات &nbsp;&nbsp; سرم تراپی
+                &nbsp;&nbsp; پانسمان &nbsp;&nbsp;حجامت&nbsp;&nbsp;سوراخ کردن
+                گوش&nbsp;&nbsp;فصد خون &nbsp;&nbsp; ماساژ درمانی &nbsp;&nbsp;
+                پانسمان سوختگی و دیابتی
+              </p>
+            </div>
+            <div class="p-3">
+              <h2 class="text-xl font-bold text-gray-200 font-byekan mb-4">
+                خدمات پوست و زیبایی با کیفیت بالا و هزینه مناسب
+              </h2>
+              <p class="text-gray-300 leading-8">
+                رفع چین و چروک پیشانی <br />
+                از بین بردن خط اخم <br />
+                رفع خطوط پنجه کلاغی کنار چشم <br />
+                رفع خط لبخند <br />
+                تزریق فیلر و ژل لب <br />
+                درمان بیماری های پوستی
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -467,16 +528,16 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="bg-gray-200 py-20">
-      <div class="container mx-auto text-center">
-        <h2 class="text-4xl font-bold mb-8">About Dr. Smith</h2>
+    <section id="aboutDoctorSection" class="bg-gray-300">
+      <div class="container mx-auto text-center text-gray-600">
+        <h2 class="text-4xl font-bold mb-8">درباره دکتر محمد علی رئوفی</h2>
         <p class="text-xl mb-6">
-          Dr. Smith is a board-certified physician with over 20 years of
-          experience in the medical field. He is dedicated to providing
-          personalized care using the latest medical advancements and a
-          compassionate approach.
+          فارغ التحصیل 1383 کارمند دانشگاه علوم پزشکی مشهد سابقه 20 سال خدمت در
+          مراکز بهداشت و اورژانس بیمارستانها سابقه مدیریت در واحد بیماریهای مرکز
+          بهداشت
         </p>
       </div>
+      <img class="w-full" src="../assets/images/About.jpg" alt="About Doctor" />
     </section>
 
     <!-- Gallery Section -->

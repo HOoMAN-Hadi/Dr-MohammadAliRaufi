@@ -125,20 +125,20 @@ beutyServ.addEventListener("click", function () {
   }
 });
 
-// Array of image URLs
-const images = [
-  "../assets/images/photo_2024-09-25_01-22-12.jpg",
-  "../assets/images/photo_2024-09-25_16-43-58.jpg",
-];
+// // Array of image URLs
+// const images = [
+//   "../assets/images/photo_2024-09-25_01-22-12.jpg",
+//   "../assets/images/photo_2024-09-25_16-43-58.jpg",
+// ];
 
-let currentIndex = 0;
+// let currentIndex = 0;
 
-// Function to change the background image
-function changeBackgroundImage() {
-  const section = document.getElementById("home");
-  currentIndex = (currentIndex + 1) % images.length; // Cycle through the images
-  section.style.backgroundImage = `url(${images[currentIndex]})`;
-}
+// // Function to change the background image
+// function changeBackgroundImage() {
+//   const section = document.getElementById("home");
+//   currentIndex = (currentIndex + 1) % images.length; // Cycle through the images
+//   section.style.backgroundImage = `url(${images[currentIndex]})`;
+// }
 //کارت های خدمات زیبایی
 
 // Data for all three cards (images and h3 text)
@@ -280,7 +280,7 @@ cardData.forEach((card, index) => {
 });
 
 // Change background every 5 seconds (5000 ms)
-setInterval(changeBackgroundImage, 5000);
+// setInterval(changeBackgroundImage, 5000);
 
 // // Slider Functionality
 // const slider = $.getElementById("slider");
