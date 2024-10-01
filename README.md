@@ -1,3 +1,3 @@
-# مطب دکتر **محمد علی ریوفی**
+# مطب دکتر **محمد علی رئوفی**
 
-### [برای ورود به دمو کلیک نمایید](https://hooman-hadi.github.io/Dr-MohammadAliRaufi/)
+### [برای ورود به دمو کلیک نمایید](https://hooman-hadi.github.io/Dr-MohammadAliRaufi/sec/)
