@@ -259,7 +259,7 @@ function updateCard(cardIndex) {
 // Button event handlers
 function setupButtons(cardIndex, prevButtonId, nextButtonId) {
   // Previous button
-  document.getElementById(prevButtonId).addEventListener("click", () => {
+  $.getElementById(prevButtonId).addEventListener("click", () => {
     const card = cardData[cardIndex];
     card.currentIndex =
       (card.currentIndex - 1 + card.imgArray.length) % card.imgArray.length;
@@ -267,7 +267,7 @@ function setupButtons(cardIndex, prevButtonId, nextButtonId) {
   });
 
   // Next button
-  document.getElementById(nextButtonId).addEventListener("click", () => {
+  $.getElementById(nextButtonId).addEventListener("click", () => {
     const card = cardData[cardIndex];
     card.currentIndex = (card.currentIndex + 1) % card.imgArray.length;
     updateCard(cardIndex);
@@ -287,24 +287,61 @@ cardData.forEach((card, index) => {
   }, 5000); // 5000 ms = 5 seconds
 });
 
-// Change background every 5 seconds (5000 ms)
-// setInterval(changeBackgroundImage, 5000);
+$.addEventListener("DOMContentLoaded", function () {
+  // Array of image URLs
+  const images = [
+    "../assets/images/pic1.jpg",
+    "../assets/images/pic2.jpg",
+    "../assets/images/pic3.jpg",
+    "../assets/images/pic4.jpg",
+    "../assets/images/pic5.jpg",
+    "../assets/images/pic6.jpg",
+    "../assets/images/pic7.jpg",
+    "../assets/images/pic8.jpg",
+    "../assets/images/pic9.jpg",
+    "../assets/images/pic10.jpg",
+    "../assets/images/pic11.jpg",
+    "../assets/images/pic12.jpg",
+    "../assets/images/pic13.jpg",
+  ];
 
-// // Slider Functionality
-// const slider = $.getElementById("slider");
-// const slides = slider.children.length;
-// let currentIndex = 0;
+  let currentIndex = 0;
+  const intervalTime = 5000; // 5 seconds
+  const galleryImage = document.getElementById("galleryImage");
 
-// $.getElementById("next").addEventListener("click", () => {
-//   currentIndex = (currentIndex + 1) % slides;
-//   updateSlider();
-// });
+  // Function to update the image source
+  function updateImage(index) {
+    galleryImage.src = images[index];
+  }
 
-// $.getElementById("prev").addEventListener("click", () => {
-//   currentIndex = (currentIndex - 1 + slides) % slides;
-//   updateSlider();
-// });
+  // Show next slide
+  function nextSlide() {
+    currentIndex = (currentIndex + 1) % images.length;
+    updateImage(currentIndex);
+  }
 
-// function updateSlider() {
-//   slider.style.transform = `translateX(-${currentIndex * 100}%)`;
-// }
+  // Show previous slide
+  function prevSlide() {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    updateImage(currentIndex);
+  }
+
+  // Auto slide every 5 seconds
+  let slideInterval = setInterval(nextSlide, intervalTime);
+
+  // Next and previous buttons event listeners
+  document.getElementById("next").addEventListener("click", () => {
+    clearInterval(slideInterval); // Stop auto slide when manual navigation is used
+    nextSlide();
+    slideInterval = setInterval(nextSlide, intervalTime); // Restart auto slide after interaction
+  });
+
+  $.getElementById("prev").addEventListener("click", () => {
+    clearInterval(slideInterval); // Stop auto slide when manual navigation is used
+    prevSlide();
+    slideInterval = setInterval(nextSlide, intervalTime); // Restart auto slide after interaction
+  });
+
+  // Initialize the first image
+  updateImage(currentIndex);
+});
