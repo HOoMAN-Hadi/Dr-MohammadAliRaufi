@@ -45,47 +45,48 @@
     <!-- Navigation Bar -->
     <nav
       id="nav"
-      class="bg-blue-800 z-50 fixed w-full top-0 flex justify-around items-center py-3"
+      class="bg-blue-800 z-50 fixed w-full top-0 hidden md:flex justify-around items-center py-3"
     >
       <div id="name" class="w-1/3 flex gap-3 items-center">
         <a href="#heroSec" class="text-white text-2xl font-bold font-byekan"
           >مطب دکتر محمد علی رئوفی</a
         >
         <div id="numbers" class="tracking-widest">
-          <p class="flex text-left">
-            051-36912930
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="2"
-              stroke="currentColor"
-              class="size-6 mr-1"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"
-              />
-            </svg>
-          </p>
-          <p class="flex mr-1 mt-2">
-            09309537869
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="2"
-              stroke="currentColor"
-              class="size-6 mr-1"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M10.5 1.5H8.25A2.25 2.25 0 0 0 6 3.75v16.5a2.25 2.25 0 0 0 2.25 2.25h7.5A2.25 2.25 0 0 0 18 20.25V3.75a2.25 2.25 0 0 0-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3"
-              />
-            </svg>
-          </p>
+          <a href="tel:05136912930"
+            ><p class="flex text-left">
+              051-36912930
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                class="size-6 mr-1"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"
+                />
+              </svg></p></a
+          ><a href="tel:+989309537869">
+            <p class="flex mr-1 mt-2">
+              09309537869
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                class="size-6 mr-1"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M10.5 1.5H8.25A2.25 2.25 0 0 0 6 3.75v16.5a2.25 2.25 0 0 0 2.25 2.25h7.5A2.25 2.25 0 0 0 18 20.25V3.75a2.25 2.25 0 0 0-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3"
+                />
+              </svg></p
+          ></a>
         </div>
       </div>
       <ul class="flex w-1/2 justify-around">
@@ -217,7 +218,7 @@
         </li>
         <li>
           <a
-            href="#_"
+            href="#end"
             class="relative inline-flex items-center justify-start px-6 py-3 overflow-hidden font-medium transition-all bg-blue-800 bg-opacity-80 rounded hover:bg-white group"
           >
             <span
@@ -747,7 +748,7 @@
           </p>
           <p class="text-sm mb-2">تلفن : 36912930-051</p>
           <p class="text-sm mb-2">همراه : 09309537869</p>
-          <p class="text-sm mb-2">ایمیل :</p>
+          <p class="text-sm mb-2">ایمیل : Ma.raoufi@gmail.com</p>
           <p class="text-sm">ساعات کاری :</p>
           <ul class="text-sm">
             <li>شنبه تا چهارشنبه : 5 عصر تا 9 شب</li>
@@ -774,17 +775,101 @@
         </div>
 
         <!-- شبکه‌های اجتماعی -->
-        <div>
+        <div class="flex flex-col items-center">
           <h4 class="text-lg font-semibold mb-4">شبکه‌های اجتماعی</h4>
-          <ul>
-            <li><a href="#" class="text-sm hover:underline">اینستاگرام</a></li>
-            <li><a href="#" class="text-sm hover:underline">تلگرام</a></li>
-            <li><a href="#" class="text-sm hover:underline">لینکدین</a></li>
+          <ul class="space-y-2">
+            <li>
+              <a
+                href="https://www.instagram.com/butax_medical_nursing_services?utm_source=qr&igsh=cjc1cTA0MHdjd3Mz"
+                target="_blank"
+                class="text-sm hover:underline flex gap-2"
+              >
+                <svg
+                  class="w-[20px] h-[20px] fill-[#8e8e8e]"
+                  viewBox="0 0 448 512"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                  <path
+                    d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
+                  ></path>
+                </svg>
+                اینستاگرام
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="https://t.me/butax1mezo2Dr3maraoufi"
+                target="_blank"
+                class="text-sm hover:underline flex gap-2"
+              >
+                <svg
+                  class="w-[20px] h-[20px] fill-[#8e8e8e]"
+                  viewBox="0 0 496 512"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                  <path
+                    d="M248,8C111.033,8,0,119.033,0,256S111.033,504,248,504,496,392.967,496,256,384.967,8,248,8ZM362.952,176.66c-3.732,39.215-19.881,134.378-28.1,178.3-3.476,18.584-10.322,24.816-16.948,25.425-14.4,1.326-25.338-9.517-39.287-18.661-21.827-14.308-34.158-23.215-55.346-37.177-24.485-16.135-8.612-25,5.342-39.5,3.652-3.793,67.107-61.51,68.335-66.746.153-.655.3-3.1-1.154-4.384s-3.59-.849-5.135-.5q-3.283.746-104.608,69.142-14.845,10.194-26.894,9.934c-8.855-.191-25.888-5.006-38.551-9.123-15.531-5.048-27.875-7.717-26.8-16.291q.84-6.7,18.45-13.7,108.446-47.248,144.628-62.3c68.872-28.647,83.183-33.623,92.511-33.789,2.052-.034,6.639.474,9.61,2.885a10.452,10.452,0,0,1,3.53,6.716A43.765,43.765,0,0,1,362.952,176.66Z"
+                  ></path>
+                </svg>
+                تلگرام</a
+              >
+            </li>
+            <li>
+              <a
+                href="mailto:Ma.raoufi@gmail.com"
+                target="_blank"
+                class="text-sm hover:underline relative group flex gap-2"
+              >
+                <svg
+                  class="w-[20px] h-[20px] fill-[#8e8e8e]"
+                  viewBox="0 0 512 512"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                  <path
+                    d="M256 64C150 64 64 150 64 256s86 192 192 192c17.7 0 32 14.3 32 32s-14.3 32-32 32C114.6 512 0 397.4 0 256S114.6 0 256 0S512 114.6 512 256v32c0 53-43 96-96 96c-29.3 0-55.6-13.2-73.2-33.9C320 371.1 289.5 384 256 384c-70.7 0-128-57.3-128-128s57.3-128 128-128c27.9 0 53.7 8.9 74.7 24.1c5.7-5 13.1-8.1 21.3-8.1c17.7 0 32 14.3 32 32v80 32c0 17.7 14.3 32 32 32s32-14.3 32-32V256c0-106-86-192-192-192zm64 192a64 64 0 1 0 -128 0 64 64 0 1 0 128 0z"
+                  ></path>
+                </svg>
+                ایمیل
+                <span
+                  class="absolute hidden group-hover:inline-block bg-gray-200 text-gray-800 p-2 rounded-md text-xs left-full ml-2"
+                >
+                  Ma.raoufi@gmail.com
+                </span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="tel:05136912930"
+                target="_blank"
+                class="text-sm hover:underline relative group flex gap-2"
+              >
+                <svg
+                  class="w-[20px] h-[20px] fill-[#8e8e8e]"
+                  viewBox="0 0 512 512"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                  <path
+                    d="M347.1 24.6c7.7-18.6 28-28.5 47.4-23.2l88 24C499.9 30.2 512 46 512 64c0 247.4-200.6 448-448 448c-18 0-33.8-12.1-38.6-29.5l-24-88c-5.3-19.4 4.6-39.7 23.2-47.4l96-40c16.3-6.8 35.2-2.1 46.3 11.6L207.3 368c70.4-33.3 127.4-90.3 160.7-160.7L318.7 167c-13.7-11.2-18.4-30-11.6-46.3l40-96z"
+                  ></path>
+                </svg>
+                تماس با ما
+                <span
+                  class="absolute hidden group-hover:inline-block bg-gray-200 text-gray-800 p-2 rounded-md text-xs left-full ml-2"
+                >
+                  051-36912930
+                </span>
+              </a>
+            </li>
           </ul>
         </div>
 
         <!-- بخش توسعه‌دهنده وب -->
-        <div>
+        <div class="flex flex-col items-center">
           <h4 class="text-lg font-semibold mb-4">توسعه‌دهنده وب</h4>
           <p class="text-sm mb-4">توسعه داده شده توسط : هومن هادی</p>
           <ul class="space-y-2">
@@ -792,34 +877,87 @@
               <a
                 href="https://t.me/HOoMAN_1384"
                 target="_blank"
-                class="text-sm hover:underline"
-                >تلگرام توسعه‌دهنده</a
+                class="text-sm hover:underline flex gap-2"
               >
+                <svg
+                  class="w-[20px] h-[20px] fill-[#8e8e8e]"
+                  viewBox="0 0 496 512"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                  <path
+                    d="M248,8C111.033,8,0,119.033,0,256S111.033,504,248,504,496,392.967,496,256,384.967,8,248,8ZM362.952,176.66c-3.732,39.215-19.881,134.378-28.1,178.3-3.476,18.584-10.322,24.816-16.948,25.425-14.4,1.326-25.338-9.517-39.287-18.661-21.827-14.308-34.158-23.215-55.346-37.177-24.485-16.135-8.612-25,5.342-39.5,3.652-3.793,67.107-61.51,68.335-66.746.153-.655.3-3.1-1.154-4.384s-3.59-.849-5.135-.5q-3.283.746-104.608,69.142-14.845,10.194-26.894,9.934c-8.855-.191-25.888-5.006-38.551-9.123-15.531-5.048-27.875-7.717-26.8-16.291q.84-6.7,18.45-13.7,108.446-47.248,144.628-62.3c68.872-28.647,83.183-33.623,92.511-33.789,2.052-.034,6.639.474,9.61,2.885a10.452,10.452,0,0,1,3.53,6.716A43.765,43.765,0,0,1,362.952,176.66Z"
+                  ></path>
+                </svg>
+                تلگرام توسعه‌دهنده
+              </a>
             </li>
 
             <li>
               <a
                 href="https://github.com/HOoMAN-Hadi"
                 target="_blank"
-                class="text-sm hover:underline"
-                >گیت‌هاب توسعه‌دهنده</a
+                class="text-sm hover:underline flex gap-2"
+                ><svg
+                  class="w-[20px] h-[20px] fill-[#8e8e8e]"
+                  viewBox="0 0 496 512"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                  <path
+                    d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
+                  ></path>
+                </svg>
+                گیت‌هاب توسعه‌دهنده</a
               >
             </li>
             <li>
               <a
-                href="mailto:h.h.0.6.6.9.1384@gmail.com"
+                href="mailto:hoomanhadi.frontdeveloper@gmail.com"
                 target="_blank"
-                class="text-sm hover:underline"
-                >ایمیل توسعه‌دهنده</a
+                class="text-sm hover:underline relative group flex gap-2"
               >
+                <svg
+                  class="w-[20px] h-[20px] fill-[#8e8e8e]"
+                  viewBox="0 0 512 512"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                  <path
+                    d="M256 64C150 64 64 150 64 256s86 192 192 192c17.7 0 32 14.3 32 32s-14.3 32-32 32C114.6 512 0 397.4 0 256S114.6 0 256 0S512 114.6 512 256v32c0 53-43 96-96 96c-29.3 0-55.6-13.2-73.2-33.9C320 371.1 289.5 384 256 384c-70.7 0-128-57.3-128-128s57.3-128 128-128c27.9 0 53.7 8.9 74.7 24.1c5.7-5 13.1-8.1 21.3-8.1c17.7 0 32 14.3 32 32v80 32c0 17.7 14.3 32 32 32s32-14.3 32-32V256c0-106-86-192-192-192zm64 192a64 64 0 1 0 -128 0 64 64 0 1 0 128 0z"
+                  ></path>
+                </svg>
+                ایمیل توسعه‌دهنده
+                <span
+                  class="absolute hidden group-hover:inline-block bg-gray-200 text-gray-800 p-2 rounded-md text-xs left-full ml-2"
+                >
+                  hoomanhadi.frontdeveloper@gmail.com
+                </span>
+              </a>
             </li>
             <li>
               <a
                 href="tel:+989021790666"
                 target="_blank"
-                class="text-sm hover:underline"
-                >تماس با توسعه‌دهنده</a
+                class="text-sm hover:underline relative group flex gap-2"
               >
+                <svg
+                  class="w-[20px] h-[20px] fill-[#8e8e8e]"
+                  viewBox="0 0 512 512"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                  <path
+                    d="M347.1 24.6c7.7-18.6 28-28.5 47.4-23.2l88 24C499.9 30.2 512 46 512 64c0 247.4-200.6 448-448 448c-18 0-33.8-12.1-38.6-29.5l-24-88c-5.3-19.4 4.6-39.7 23.2-47.4l96-40c16.3-6.8 35.2-2.1 46.3 11.6L207.3 368c70.4-33.3 127.4-90.3 160.7-160.7L318.7 167c-13.7-11.2-18.4-30-11.6-46.3l40-96z"
+                  ></path>
+                </svg>
+                تماس با توسعه‌دهنده
+                <span
+                  class="absolute hidden group-hover:inline-block bg-gray-200 text-gray-800 p-2 rounded-md text-xs left-full ml-2"
+                >
+                  989021790666+
+                </span>
+              </a>
             </li>
           </ul>
         </div>
@@ -827,6 +965,7 @@
 
       <!-- حقوق کپی‌رایت -->
       <div
+        id="end"
         class="border-t-2 border-gray-700 mt-8 pt-4 text-center text-sm text-yellow-500 font-lalezar"
       >
         <p>© 2024 تمامی حقوق برای مطب دکتر محمد علی رئوفی محفوظ است.</p>
