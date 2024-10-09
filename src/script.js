@@ -1,5 +1,7 @@
 let $ = document;
 
+let nav = $.querySelector("#nav");
+
 let servicesLi = $.querySelector("#servicesLi");
 let servicesBar = $.querySelector("#servicesBar");
 let servicesBarToggle = false;
@@ -147,8 +149,8 @@ document.body.addEventListener("click", function (event) {
 //   currentIndex = (currentIndex + 1) % images.length; // Cycle through the images
 //   section.style.backgroundImage = `url(${images[currentIndex]})`;
 // }
-//کارت های خدمات زیبایی
 
+//کارت های خدمات زیبایی
 // Data for all three cards (images and h3 text)
 const cardData = [
   {
@@ -303,6 +305,8 @@ $.addEventListener("DOMContentLoaded", function () {
     "../assets/images/pic11.jpg",
     "../assets/images/pic12.jpg",
     "../assets/images/pic13.jpg",
+    "../assets/images/pic15.jpg",
+    "../assets/images/pic17.jpg",
   ];
 
   let currentIndex = 0;
@@ -344,4 +348,16 @@ $.addEventListener("DOMContentLoaded", function () {
 
   // Initialize the first image
   updateImage(currentIndex);
+});
+
+$.addEventListener("scroll", function () {
+  if ($.documentElement.scrollTop == 0) {
+    nav.classList.remove("bg-opacity-50");
+    nav.classList.remove("py-1");
+    nav.classList.add("py-3");
+  } else {
+    nav.classList.add("bg-opacity-50");
+    nav.classList.remove("py-3");
+    nav.classList.add("py-1");
+  }
 });

@@ -35,6 +35,9 @@
       .btn:hover {
         background-color: #0056b3;
       }
+      footer a {
+        text-decoration-color: gray;
+      }
     </style>
   </head>
 
@@ -42,7 +45,7 @@
     <!-- Navigation Bar -->
     <nav
       id="nav"
-      class="bg-blue-800 z-10 bg-opacity-50 fixed w-full top-0 flex justify-around items-center py-3"
+      class="bg-blue-800 z-50 fixed w-full top-0 flex justify-around items-center py-3"
     >
       <div id="name" class="w-1/3 flex gap-3 items-center">
         <a href="#heroSec" class="text-white text-2xl font-bold font-byekan"
@@ -291,7 +294,7 @@
             </svg>
             &nbsp; شنبه تا چارشنبه ساعت 17 تا 21
           </p>
-          <div class="flex w-1/2 justify-between text-gray-900">
+          <div class="flex w-1/2 justify-between gap-3 text-gray-900">
             <a
               href="#beutyServSec"
               class="relative inline-flex items-center justify-start px-6 py-3 overflow-hidden font-medium transition-all bg-white bg-opacity-80 rounded hover:bg-blue-800 group"
@@ -349,12 +352,6 @@
                 &nbsp;&nbsp;
                 <li>پرستاری در منزل</li>
               </ul>
-              <!-- <p class="text-gray-300 text-[16px]">
-                ویزیت پزشک&nbsp;&nbsp; تزریقات &nbsp;&nbsp; سرم تراپی
-                &nbsp;&nbsp; پانسمان &nbsp;&nbsp;حجامت&nbsp;&nbsp;سوراخ کردن
-                گوش&nbsp;&nbsp;فصد خون &nbsp;&nbsp; ماساژ درمانی &nbsp;&nbsp;
-                پانسمان سوختگی و دیابتی
-              </p> -->
             </div>
             <div class="p-3">
               <h2 class="text-xl font-bold text-gray-200 font-byekan mb-2">
@@ -629,7 +626,7 @@
           <!-- Clinic Image -->
           <div class="w-full md:w-1/2 p-6">
             <img
-              src="../assets/images/pic3.jpg"
+              src="../assets/images/pic16.jpg"
               alt="Clinic Interior"
               class="rounded-lg shadow-xl border-4 border-yellow-400"
             />
@@ -734,11 +731,108 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-blue-600 text-white py-4">
-      <div class="container mx-auto text-center">
-        <p>&copy; 2024 Dr. Smith's Clinic. All rights reserved.</p>
+    <footer
+      class="bg-blue-950 text-white py-8 mt-8 font-byekan underline-offset-[6px]"
+      style="text-decoration-color: gray"
+    >
+      <div
+        class="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 px-6 text-center"
+      >
+        <!-- بخش اطلاعات تماس -->
+        <div>
+          <h4 class="text-lg font-semibold mb-4">اطلاعات تماس</h4>
+          <p class="text-sm mb-2">
+            مشهد - خیابان توس 41 (خیابان درودی) - روبروی درودی 11 - بین درودی 12
+            و 14
+          </p>
+          <p class="text-sm mb-2">تلفن : 36912930-051</p>
+          <p class="text-sm mb-2">همراه : 09309537869</p>
+          <p class="text-sm mb-2">ایمیل :</p>
+          <p class="text-sm">ساعات کاری :</p>
+          <ul class="text-sm">
+            <li>شنبه تا چهارشنبه : 5 عصر تا 9 شب</li>
+            <li>پنجشنبه و جمعه : تعطیل</li>
+          </ul>
+        </div>
+
+        <!-- لینک‌های مفید -->
+        <div>
+          <h4 class="text-lg font-semibold mb-4">لینک‌های مفید</h4>
+          <ul class="space-y-2">
+            <li>
+              <a href="#" class="text-sm hover:underline">خدمات درمانی</a>
+            </li>
+            <li>
+              <a href="#" class="text-sm hover:underline">خدمات زیبایی</a>
+            </li>
+            <li>
+              <a href="#" class="text-sm hover:underline">گالری تصاویر</a>
+            </li>
+            <li><a href="#" class="text-sm hover:underline">درباره پزشک</a></li>
+            <li><a href="#" class="text-sm hover:underline">درباره مطب</a></li>
+          </ul>
+        </div>
+
+        <!-- شبکه‌های اجتماعی -->
+        <div>
+          <h4 class="text-lg font-semibold mb-4">شبکه‌های اجتماعی</h4>
+          <ul>
+            <li><a href="#" class="text-sm hover:underline">اینستاگرام</a></li>
+            <li><a href="#" class="text-sm hover:underline">تلگرام</a></li>
+            <li><a href="#" class="text-sm hover:underline">لینکدین</a></li>
+          </ul>
+        </div>
+
+        <!-- بخش توسعه‌دهنده وب -->
+        <div>
+          <h4 class="text-lg font-semibold mb-4">توسعه‌دهنده وب</h4>
+          <p class="text-sm mb-4">توسعه داده شده توسط : هومن هادی</p>
+          <ul class="space-y-2">
+            <li>
+              <a
+                href="https://t.me/HOoMAN_1384"
+                target="_blank"
+                class="text-sm hover:underline"
+                >تلگرام توسعه‌دهنده</a
+              >
+            </li>
+
+            <li>
+              <a
+                href="https://github.com/HOoMAN-Hadi"
+                target="_blank"
+                class="text-sm hover:underline"
+                >گیت‌هاب توسعه‌دهنده</a
+              >
+            </li>
+            <li>
+              <a
+                href="mailto:h.h.0.6.6.9.1384@gmail.com"
+                target="_blank"
+                class="text-sm hover:underline"
+                >ایمیل توسعه‌دهنده</a
+              >
+            </li>
+            <li>
+              <a
+                href="tel:+989021790666"
+                target="_blank"
+                class="text-sm hover:underline"
+                >تماس با توسعه‌دهنده</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- حقوق کپی‌رایت -->
+      <div
+        class="border-t-2 border-gray-700 mt-8 pt-4 text-center text-sm text-yellow-500 font-lalezar"
+      >
+        <p>© 2024 تمامی حقوق برای مطب دکتر محمد علی رئوفی محفوظ است.</p>
       </div>
     </footer>
+
     <script src="script.js"></script>
   </body>
 </html>
