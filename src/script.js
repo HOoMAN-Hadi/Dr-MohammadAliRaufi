@@ -1,6 +1,7 @@
 let $ = document;
 
 let nav = $.querySelector("#nav");
+const liItems = document.querySelectorAll("ul li");
 
 let servicesLi = $.querySelector("#servicesLi");
 let servicesBar = $.querySelector("#servicesBar");
@@ -17,138 +18,101 @@ let aboutBar = $.querySelector("#aboutBar");
 let aboutBarToggle = false;
 let aboutIcon = $.querySelector("#aboutIcon");
 
-let botoxCardContainer = $.querySelector("#botoxCardContainer");
-let botoxCardContainerImg = $.getElementById("botoxCardContainerImg");
-let botoxCardContainerImgSecond = $.getElementById(
-  "botoxCardContainerImgSecond"
-);
-// let lipsCardContainerImg = $.getElementById("lipsCardContainerImg");
-// let lipsCardContainer = $.querySelector("#lipsCardContainer");
-let botoxCardH1 = $.getElementById("botoxCardH1");
-let botoxCardH3 = $.getElementById("botoxCardH3");
-let lipsCardH1 = $.getElementById("lipsCardH1");
-let lipsCardH3 = $.getElementById("lipsCardH3");
-let botoxCardH1Second = $.getElementById("botoxCardH1Second");
-let botoxCardH3Second = $.getElementById("botoxCardH3Second");
+const sunIcon = $.getElementById("sunIcon");
+const brithnessBar = $.getElementById("brithnessBar");
+let brightnessBarToggle = false;
 
-//پایان تعریف متغیر ها
+// یک تابع برای بستن همه نوارهای باز
+function closeAllBars() {
+  // بستن نوار خدمات (servicesBar) و منوی فرعی خدمات زیبایی (beutyServBar)
+  if (servicesBarToggle) {
+    servicesBar.classList.add("hidden");
+    servicesIcon.classList.remove("rotate-180");
+    servicesBarToggle = false;
+    beutyServBar.classList.add("hidden");
+    beutyServBarIcon.classList.remove("rotate-90");
+    beutyServicesToggle = false;
+  }
 
-// نمایش و مخفی‌سازی servicesBar وقتی روی servicesLi کلیک می‌شود
-servicesLi.addEventListener("click", function (event) {
-  event.stopPropagation();
-
-  // مخفی کردن aboutBar در صورت باز بودن
+  // بستن نوار درباره (aboutBar)
   if (aboutBarToggle) {
     aboutBar.classList.add("hidden");
     aboutIcon.classList.remove("rotate-180");
     aboutBarToggle = false;
   }
 
-  // نمایش یا مخفی کردن servicesBar
-  if (!servicesBarToggle) {
-    servicesBar.classList.remove("hidden");
-    servicesIcon.classList.add("rotate-180");
-    servicesBarToggle = true;
-  } else {
-    servicesBar.classList.add("hidden");
-    servicesIcon.classList.remove("rotate-180");
-    servicesBarToggle = false;
-    beutyServBar.classList.add("hidden"); // مخفی کردن beutyServBar در صورت بسته شدن servicesBar
-    beutyServicesToggle = false;
+  // بستن نوار روشنایی (brightnessBar)
+  if (brightnessBarToggle) {
+    brithnessBar.classList.add("hidden");
+    brithnessBar.classList.remove("flex");
+    brightnessBarToggle = false;
   }
+}
+
+// مدیریت کلیک روی servicesLi
+servicesLi.addEventListener("click", function (event) {
+  event.stopPropagation();
+  closeAllBars(); // بستن نوارهای باز
+  servicesBar.classList.toggle("hidden");
+  servicesIcon.classList.toggle("rotate-180");
+  servicesBarToggle = !servicesBarToggle;
 });
 
-// نمایش و مخفی‌سازی beutyServBar وقتی روی beutyServ کلیک می‌شود
+// مدیریت کلیک روی beutyServ (منوی فرعی خدمات زیبایی)
 beutyServ.addEventListener("click", function (event) {
   event.stopPropagation();
-
-  // مطمئن شوید که servicesBar قابل مشاهده است
   if (!servicesBarToggle) {
     servicesBar.classList.remove("hidden");
     servicesIcon.classList.add("rotate-180");
     servicesBarToggle = true;
   }
-
-  // نمایش یا مخفی کردن beutyServBar
-  if (!beutyServicesToggle) {
-    beutyServBar.classList.remove("hidden");
-    beutyServBarIcon.classList.add("rotate-90");
-    beutyServicesToggle = true;
-  } else {
-    beutyServBar.classList.add("hidden");
-    beutyServBarIcon.classList.remove("rotate-90");
-    beutyServicesToggle = false;
-  }
+  beutyServBar.classList.toggle("hidden");
+  beutyServBarIcon.classList.toggle("rotate-90");
+  beutyServicesToggle = !beutyServicesToggle;
 });
 
-// نمایش و مخفی‌سازی aboutBar وقتی روی aboutLi کلیک می‌شود
+// مدیریت کلیک روی aboutLi
 aboutLi.addEventListener("click", function (event) {
   event.stopPropagation();
-
-  // مخفی کردن servicesBar در صورت باز بودن
-  if (servicesBarToggle) {
-    servicesBar.classList.add("hidden");
-    servicesIcon.classList.remove("rotate-180");
-    servicesBarToggle = false;
-    beutyServBar.classList.add("hidden"); // مخفی کردن beutyServBar در صورت بسته شدن servicesBar
-    beutyServBarIcon.classList.remove("rotate-90");
-    beutyServicesToggle = false;
-  }
-
-  // نمایش یا مخفی کردن aboutBar
-  if (!aboutBarToggle) {
-    aboutBar.classList.remove("hidden");
-    aboutIcon.classList.add("rotate-180");
-    aboutBarToggle = true;
-  } else {
-    aboutBar.classList.add("hidden");
-    aboutIcon.classList.remove("rotate-180");
-    aboutBarToggle = false;
-  }
+  closeAllBars(); // بستن نوارهای باز
+  aboutBar.classList.toggle("hidden");
+  aboutIcon.classList.toggle("rotate-180");
+  aboutBarToggle = !aboutBarToggle;
 });
 
-// مخفی کردن نوارها وقتی بیرون از آنها کلیک می‌شود
-document.body.addEventListener("click", function (event) {
-  // اگر بیرون از servicesBar و servicesLi کلیک شد
-  if (
-    servicesBarToggle &&
-    !servicesBar.contains(event.target) &&
-    !servicesLi.contains(event.target)
-  ) {
-    servicesBar.classList.add("hidden");
-    servicesIcon.classList.remove("rotate-180");
-    servicesBarToggle = false;
-    beutyServBar.classList.add("hidden");
-    beutyServBarIcon.classList.remove("rotate-90");
-    beutyServicesToggle = false;
-  }
-
-  // اگر بیرون از aboutBar و aboutLi کلیک شد
-  if (
-    aboutBarToggle &&
-    !aboutBar.contains(event.target) &&
-    !aboutLi.contains(event.target)
-  ) {
-    aboutBar.classList.add("hidden");
-    aboutIcon.classList.remove("rotate-180");
-    aboutBarToggle = false;
-  }
+// مدیریت کلیک روی sunIcon (نوار روشنایی)
+sunIcon.addEventListener("click", function (event) {
+  event.stopPropagation();
+  closeAllBars(); // بستن نوارهای باز
+  brithnessBar.classList.toggle("hidden");
+  brithnessBar.classList.toggle("flex");
+  brightnessBarToggle = !brightnessBarToggle;
 });
 
-// // Array of image URLs
-// const images = [
-//   "../assets/images/photo_2024-09-25_01-22-12.jpg",
-//   "../assets/images/photo_2024-09-25_16-43-58.jpg",
-// ];
+// کلیک خارج از نوارها برای بستن نوارهای باز
+document.body.addEventListener("click", function () {
+  closeAllBars();
+});
 
-// let currentIndex = 0;
+// بستن نوار روشنایی هنگام کلیک روی سایر آیتم‌ها
+liItems.forEach((li) => {
+  li.addEventListener("click", function (event) {
+    if (li !== sunIcon) {
+      brithnessBar.classList.add("hidden");
+      brithnessBar.classList.remove("flex");
+      brightnessBarToggle = false;
+    }
+  });
+});
 
-// // Function to change the background image
-// function changeBackgroundImage() {
-//   const section = document.getElementById("home");
-//   currentIndex = (currentIndex + 1) % images.length; // Cycle through the images
-//   section.style.backgroundImage = `url(${images[currentIndex]})`;
-// }
+// بستن نوار روشنایی هنگام کلیک خارج از آن
+$.addEventListener("click", function (event) {
+  if (!brithnessBar.contains(event.target) && !sunIcon.contains(event.target)) {
+    brithnessBar.classList.add("hidden");
+    brithnessBar.classList.remove("flex");
+    brightnessBarToggle = false;
+  }
+});
 
 //کارت های خدمات زیبایی
 // Data for all three cards (images and h3 text)
@@ -361,3 +325,25 @@ $.addEventListener("scroll", function () {
     nav.classList.add("py-1");
   }
 });
+
+//Brightness Slider
+const slider = $.getElementById("slider");
+function brightnessHandler() {
+  console.log(slider.value);
+  $.body.className =
+    "bg-blue-800 text-white font-lalezar brightness-[" + slider.value + "%]";
+  localStorage.setItem("brightnessValue", slider.value);
+}
+function getLocalStorageBv() {
+  const savedBrightness = localStorage.getItem("brightnessValue");
+  if (savedBrightness) {
+    slider.value = savedBrightness;
+    // document.body.style.filter = `brightness(${savedBrightness}%)`;
+    $.body.className =
+      "bg-blue-800 text-white font-lalezar brightness-[" +
+      savedBrightness +
+      "%]";
+  }
+}
+window.addEventListener("load", getLocalStorageBv);
+slider.addEventListener("change", brightnessHandler);
