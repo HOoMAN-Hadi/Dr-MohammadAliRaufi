@@ -330,20 +330,15 @@ $.addEventListener("scroll", function () {
 const slider = $.getElementById("slider");
 function brightnessHandler() {
   console.log(slider.value);
-  $.body.className =
-    "bg-blue-800 text-white font-lalezar brightness-[" + slider.value + "%]";
+  $.body.className = `bg-blue-800 text-white font-lalezar brightness-${slider.value}`;
   localStorage.setItem("brightnessValue", slider.value);
 }
 function getLocalStorageBv() {
   const savedBrightness = localStorage.getItem("brightnessValue");
   if (savedBrightness) {
     slider.value = savedBrightness;
-    // document.body.style.filter = `brightness(${savedBrightness}%)`;
-    $.body.className =
-      "bg-blue-800 text-white font-lalezar brightness-[" +
-      savedBrightness +
-      "%]";
+    $.body.className = `bg-blue-800 text-white font-lalezar brightness-${slider.value}`;
   }
 }
 window.addEventListener("load", getLocalStorageBv);
-slider.addEventListener("change", brightnessHandler);
+slider.addEventListener("input", brightnessHandler);
