@@ -1,5 +1,6 @@
 let $ = document;
 
+const scrollBar = $.getElementById("scrollBar");
 let nav = $.querySelector("#nav");
 const liItems = document.querySelectorAll("ul li");
 
@@ -317,12 +318,12 @@ $.addEventListener("DOMContentLoaded", function () {
 $.addEventListener("scroll", function () {
   if ($.documentElement.scrollTop == 0) {
     nav.classList.remove("bg-opacity-50");
-    nav.classList.remove("py-1");
+    nav.classList.remove("py-2");
     nav.classList.add("py-3");
   } else {
     nav.classList.add("bg-opacity-50");
     nav.classList.remove("py-3");
-    nav.classList.add("py-1");
+    nav.classList.add("py-2");
   }
 });
 
@@ -342,3 +343,14 @@ function getLocalStorageBv() {
 }
 window.addEventListener("load", getLocalStorageBv);
 slider.addEventListener("input", brightnessHandler);
+
+window.addEventListener("scroll", function () {
+  let scrollTop = window.scrollY;
+  let documentHeight = document.body.clientHeight;
+  let windowHeight = window.innerHeight;
+  let scrollPercent = scrollTop / (documentHeight - windowHeight);
+  let scrollPercentRounded = Math.round(scrollPercent * 100);
+
+  scrollBar.style.width = scrollPercentRounded + "%";
+  console.log(scrollPercentRounded);
+});
